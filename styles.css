@@ -29,28 +29,26 @@ input {
   color: rgba(58, 56, 56, 0.845);
 }
 
-a {
-  color: #243e63;
-}
-
 .row {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-a:hover {
-  text-decoration: underline;
-  transition: all 300ms smooth;
+a {
+  transition: all 300ms ease;
+  color: #243e63;
 }
+
 
 button {
   cursor: pointer;
 }
 
-button:active {
-  transform: translateY(1px);
+nav {
+  margin-top: 16px;
 }
+
 
 /*
 NAV
@@ -80,11 +78,11 @@ NAV
   text-decoration: none;
 }
 
-.nav__button--wrapper {
+ .nav__button--wrapper {
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
+} 
 
 .nav {
   display: flex;
@@ -108,34 +106,60 @@ ul {
 li {
   list-style-type: none;
   text-decoration: none;
+  
 }
 
 .nav__link {
   margin-left: 24px;
   margin-right: 24px;
+  padding-bottom: 0.25rem;
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
+  border-bottom: 2px solid transparent;
 }
 
 .nav__button {
-  border: none;
+  border: 3px solid;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 32px;
   padding-right: 32px;
-  border-radius: 24px;
+  border-radius: 9999px;
   background-color: #6515ff;
   color: white;
   font-size: 16px;
   font-weight: bold;
+  transition: all 300ms ease;
 }
 
 .nav__links--wrapper {
-  margin-left: 160px;
+  display: flex;
+  align-items: center;
   line-height: 1.5;
 }
+
+.login {
+  margin-left: 20px;
+}
+
+.nav__link:hover {
+  color:#6515ff;
+  border-color: #6515ff;
+}
+
+.nav__button:hover {
+  background-color: #4800cef1;
+  color: rgb(235, 233, 233);
+}
+
+.nav__button:active {
+  border-color: rgba(89, 225, 255, 0.91);
+  box-shadow: #245463;
+}
+
+/* MODAL */
 
 .btn__menu {
   background-color: transparent;
@@ -218,17 +242,34 @@ LANDING
   font-size: 16px;
 }
 
-.landing__email {
-  border: 2px solid #243e63;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 32px;
+input {
+  width: 100%;
   border-radius: 9999px;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1.25rem;
+  padding-right: 12rem;
+  border: 2.5px solid #c7c7c779;
+  position: relative;
+  transition: all 300ms ease;
+}
+
+.landing__email {
   font-weight: 100%;
+  position: relative;
 }
 
 .sign-up__button {
+  position: absolute;
   right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 9999px;
+  padding-left: 38px;
+  padding-right: 38px;
 }
 
 .customer__logos--para {
@@ -259,6 +300,20 @@ LANDING
   min-width: 0px;
   width: 100%;
   max-width: 32rem;
+}
+
+input:hover {
+  border-color: #243e63ad;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0);
+}
+
+input:focus {
+  border-color: #6515ff;
+  box-shadow: #6515ff 0px 0px 1px;
+}
+
+input::placeholder {
+  color: #c7c7c7c7
 }
 
 /*
@@ -399,7 +454,6 @@ INFO
 
 .info__button {
   margin-top: 2rem;
-  border: none;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 32px;
@@ -871,10 +925,19 @@ footer {
   flex-direction: column;
 }
 
+.footer__list {
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
 .footer__link {
   color: white;
   text-decoration: none;
-  margin-top: 0.75rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid transparent;
+  font-size: 0.875rem;
+  letter-spacing: 0.05rem;
+  transition: all 300ms ease;
 }
 
 .footer__divider {
@@ -932,6 +995,16 @@ footer {
   text-decoration: none;
 }
 
+.footer__link:hover {
+  border-color: white;
+}
+
+.footer__social--link:hover {
+  background-color: rgba(255, 255, 255, 0.691);
+}
+
+/* MEDIA QUERIES */
+
 @media (max-width: 1024px) {
   .nav__links,
   .nav__link,
@@ -971,7 +1044,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-
   /*
   SERVICES
   */
