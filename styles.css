@@ -40,15 +40,54 @@ a {
   color: #243e63;
 }
 
-
 button {
   cursor: pointer;
+  border: 3px solid;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 32px;
+  padding-right: 32px;
+  border-radius: 9999px;
+  background-color: #6515ff;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 300ms ease;
 }
 
 nav {
   margin-top: 16px;
 }
 
+.subheader {
+  letter-spacing: 0.1em;
+}
+
+.header {
+  font-size: 48px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-weight: 700;
+  letter-spacing: 0.025rem;
+  color: #243e63;
+  letter-spacing: 0.15rem;
+}
+
+.para {
+  margin-top: 1rem;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #7c8ba1;
+  text-align: left;
+  max-width: 36rem;
+}
+
+dt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 /*
 NAV
@@ -78,11 +117,11 @@ NAV
   text-decoration: none;
 }
 
- .nav__button--wrapper {
+.nav__button--wrapper {
   display: flex;
   justify-content: space-around;
   align-items: center;
-} 
+}
 
 .nav {
   display: flex;
@@ -106,7 +145,6 @@ ul {
 li {
   list-style-type: none;
   text-decoration: none;
-  
 }
 
 .nav__link {
@@ -145,7 +183,7 @@ li {
 }
 
 .nav__link:hover {
-  color:#6515ff;
+  color: #6515ff;
   border-color: #6515ff;
 }
 
@@ -313,7 +351,7 @@ input:focus {
 }
 
 input::placeholder {
-  color: #c7c7c7c7
+  color: #c7c7c7c7;
 }
 
 /*
@@ -655,15 +693,40 @@ PLANS
   justify-content: center;
 }
 
+.plan__highlight {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  height: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.left__highlight {
+  background: linear-gradient(
+    115deg,
+    rgb(56, 178, 172) 0%,
+    rgb(129, 230, 217) 100%
+  );
+}
+
+.right__highlight {
+  background: linear-gradient(
+    115deg,
+    rgb(245, 101, 101) 0%,
+    rgb(254, 178, 178) 100%
+  );
+}
+
 .plan {
+  position: relative;
   width: calc(100% / 3);
   display: flex;
   flex-direction: column;
-  border: 1px solid rgba(0, 0, 0, 0.274);
-  border-radius: 8px;
+  border: 1px solid rgba(111, 111, 111, 0.175);
+  border-radius: 0.5rem;
   margin-top: 4rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
   padding-top: 0.5rem;
   text-align: center;
   margin-right: 2rem;
@@ -698,7 +761,11 @@ PLANS
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  border-style: 1px solid;
+  border-top: 2px solid #e1e2e4;
+  border-bottom: 2px solid #e1e2e4;
+}
+
+.middle__plan--features {
 }
 
 .plan__main-feature {
@@ -715,19 +782,17 @@ PLANS
 }
 
 .plan__action {
-  padding: 2rem 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 2rem 4rem;
 }
 
 .plan__button {
   border: none;
   width: 100%;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   padding-left: 32px;
   padding-right: 32px;
-  border-radius: 24px;
+  border-radius: 9999px;
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -763,6 +828,8 @@ PLANS
   );
   color: white;
   border-radius: 0.5rem;
+  border-top: 2px transparent #e1e2e41f !important;
+  border-bottom: 2px solid #e1e2e4;
 }
 
 .middle__plan--duration {
@@ -862,16 +929,13 @@ SUBFOOTER
 }
 
 .sub__footer--buttons {
-  padding-left: 80px;
+  /* padding-left: 80px; */
   display: flex;
 }
 
 .get__started--btn {
   border: none;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 1.25rem 2.5rem;
   border-radius: 9999px;
   background-color: #f56565;
   color: white;
@@ -881,10 +945,7 @@ SUBFOOTER
 
 .contact__btn {
   border: solid white 0.5px;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 1.25rem 2.5rem;
   border-radius: 9999px;
   background-color: #6515ff;
   color: white;
@@ -892,6 +953,82 @@ SUBFOOTER
   font-weight: bold;
   margin-left: 40px;
 }
+
+/*
+FAQS
+*/
+
+.FAQ__header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.FAQ__para {
+  text-align: center;
+}
+
+.FAQ__container {
+  margin-top: 48px;
+  padding: 1.25rem 2rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion__label,
+.accordion__content {
+  padding: 1.25rem 2rem;
+}
+
+
+.accordion__label {
+  display: block;
+  font-weight: 500;
+  position: relative;
+  transition: background 0.1s ease;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #245463;
+  background-color: #7c8ba13b; 
+}
+
+.FAQ__question:hover {
+  background: #f9f9f9;
+}
+
+.accordion__input {
+  display: none;
+}
+
+.accordion__content {
+  display: none;
+  background-color: #7c8ba13b; 
+  line-height: 1.6;
+}
+
+.accordion__input:checked ~ .accordion__content {
+  display: block;
+}
+
+.FAQ__chevron {
+  width: 16px;
+  height: 16px;
+  transform: rotate(180deg); /* Initially facing down */
+  position: absolute;
+  right: 1.25rem;
+  transition: transform 0.3s ease; /* Add transition for smooth rotation */
+}
+
+.accordion__input:checked + .accordion__label .FAQ__chevron {
+  transform: rotate(0deg); /* Rotate to face up when checked */
+}
+
 
 /*
 FOOTER
@@ -1040,6 +1177,33 @@ footer {
 
   .service {
     width: calc(100% / 2);
+  }
+
+  .sub__footer--buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .plans__wrapper {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .plans {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .plan {
+    width: 100%;
+    max-width: 24rem;
+    margin: 0 auto;
+    margin-top: 4rem;
+    height: 100%;
+  }
+
+  .plans__header {
+    text-align: center;
   }
 }
 
@@ -1217,26 +1381,6 @@ footer {
   PRICING 
   */
 
-  .plans__wrapper {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-
-  .plans {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .plan {
-    width: 60%;
-    margin: 0 auto;
-    margin-top: 4rem;
-  }
-
-  .plans__header {
-    text-align: center;
-  }
-
   /*
   TEXTIMONIALS
   */
@@ -1312,4 +1456,7 @@ footer {
     padding: 1.25rem;
     width: 64px;
   }
+}
+
+@media (max-width: 640px) {
 }
