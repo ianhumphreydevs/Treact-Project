@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <section class="landing">
+  <section id="landing" class="slide-in">
     <div class="row">
       <nav>
         <div class="nav__container">
@@ -37,14 +37,14 @@
             <button class="btn__menu btn__menu--close" onclick="closeMenu()">
               <i class="fas fa-times"></i>
             </button>
-            <ul class="menu__links">
-              <li class="menu__list"><a class="menu__link" href="#">Home</a></li>
-              <li class="menu__list"><a class="menu__link" href="#features">About</a></li>
-              <li class="menu__list"><a class="menu__link" href="#">Blog</a></li>
-              <li class="menu__list"><a class="menu__link" href="#plans">Pricing</a></li>
-              <li class="menu__list"><a class="menu__link" href="#footer">Contact</a></li>
-              <li class="menu__list"><a class="menu__link" href="#">Sign Up</a></li>
-            </ul>
+            <div class="menu__links">
+              <a class="menu__link" href="#">Home</a></li>
+              <a class="menu__link" href="#features">About</a></li>
+              <a class="menu__link" href="#">Blog</a></li>
+              <a class="menu__link" href="#plans">Pricing</a></li>
+              <a class="menu__link" href="#footer">Contact</a></li>
+              <button class=""><a class="menu__link modal__button" href="#">Sign Up</a></button>
+            </div>
           </div>
         </div>
       </nav>
@@ -75,7 +75,7 @@
     </div>
   </section>
 
-  <section id="features">
+  <section id="features" class="slide-in">
     <div class="container">
       <div class="row">
         <div class="features__heading--wrapper">
@@ -185,7 +185,7 @@
         </div>
   </section>
 
-  <section id="quality__work">
+  <section id="quality__work" class="slide-in">
     <div class="row info__box">
       <div class="info__text-box">
         <h4 class="subheader"><span class="text__purple">QUALITY WORK</span></h4>
@@ -199,7 +199,7 @@
           libero modi, assumenda maiores odio hic esse. Sapiente cum fugiat
           aperiam facilis quo?
         </p>
-        <button class="info__button nav__button">Learn More</button>
+        <button class="info__button">Learn More</button>
       </div>
       <div class="info__img--wrapper">
         <img class="info__img"
@@ -208,7 +208,7 @@
     </div>
   </section>
 
-  <section id="get__started">
+  <section id="get__started" class="slide-in">
     <div class="row get-started__wrapper">
       <div class="get-started__img--wrapper">
         <img class="get-started__img"
@@ -247,7 +247,7 @@
     </div>
   </section>
 
-  <section id="values">
+  <section id="values" class="slide-in">
     <div class="row">
       <div class="values__wrapper">
         <div class="values__text--wrapper">
@@ -289,7 +289,7 @@
     </div>
   </section>
 
-  <section id="plans">
+  <section id="plans" class="slide-in">
     <div class="row plans__wrapper">
       <div class="plans__header--info">
         <h4 class="text__purple values__subheader">PRICING</h4>
@@ -355,7 +355,7 @@
     </div>
   </section>
 
-  <section id="testimonials">
+  <section id="testimonials" class="slide-in">
     <div class="row">
       <div class="testimonials">
         <div class="testimonials__wrapper">
@@ -402,7 +402,7 @@
     </div>
   </section>
 
-  <section id="FAQs">
+  <section id="FAQs" class="slide-in">
     <div class="row">
       <div class="FAQs">
         <div class="FAQ__header">
@@ -413,9 +413,9 @@
             elit.</p>
         </div>
         <div class="FAQ__container">
-          <div classname="FAQ">
+          <div class="FAQ">
             <input type="checkbox" name="FAQs--accordion" id="question1" class="accordion__input">
-            <label for="question1" class="accordion__label">Question 1
+            <label for="question1" class="accordion__label">Are the templates easily customizable?
 
               <span class="FAQ__button--container">
                 <svg class="FAQ__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -425,111 +425,93 @@
             </label>
 
             <div class="accordion__content">
-              <p class="accordion__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              <p class="accordion__para">Yes, all of our templates can easily be customized for your specific needs!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
                 voluptatibus quibusdam dignissimos fuga fugiat iste!</p>
 
             </div>
-            <!-- </div>
-          <div>
+          </div>
+          <div class="FAQ">
             <input type="checkbox" name="FAQs--accordion" id="question2" class="accordion__input">
-            <div class="FAQ__question">
-              <label for="question2" class="accordion__label">Question 2
-              </label>
+            <label for="question2" class="accordion__label">How long do you usually support a standalone template for?
+
               <span class="FAQ__button--container">
                 <svg class="FAQ__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path
                     d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z" />
                 </svg></span>
-            </div>
+            </label>
+
             <div class="accordion__content">
-              <p class="accordion__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-                voluptatibus quibusdam dignissimos fuga fugiat iste!</p>
+              <p class="accordion__para"> We usually support a standalone template for about 6 months. After that, you
+                can purchase extended support
+                for a small fee. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam voluptatibus quibusdam dignissimos fuga fugiat iste!</p>
 
             </div>
           </div>
-          <div>
+          <div class="FAQ">
             <input type="checkbox" name="FAQs--accordion" id="question3" class="accordion__input">
-            <div class="FAQ__question">
-              <label for="question3" class="accordion__label">Question 3
-              </label>
+            <label for="question3" class="accordion__label">What kind of payment methods do you accept?
+
               <span class="FAQ__button--container">
                 <svg class="FAQ__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path
                     d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z" />
                 </svg></span>
-            </div>
+            </label>
+
             <div class="accordion__content">
-              <p class="accordion__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-                voluptatibus quibusdam dignissimos fuga fugiat iste!</p>
+              <p class="accordion__para">We accept all major credit and debit cards. You can also pay using PayPal.
+                Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Quisquam voluptatibus quibusdam dignissimos fuga fugiat iste!</p>
 
             </div>
-          </div> -->
+          </div>
+          <div class="FAQ">
+            <input type="checkbox" name="FAQs--accordion" id="question4" class="accordion__input">
+            <label for="question4" class="accordion__label">Is there a subscription service to get the latest templates?
 
-            <!-- <div class="FAQ">
-            <dt>
-              <span class="FAQ__question">How long do you usually support a standalone template for?</span>
               <span class="FAQ__button--container">
                 <svg class="FAQ__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path
                     d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z" />
                 </svg></span>
-            </dt>
-            <dd class="FAQ__answer">
-              We usually support a standalone template for about 6 months. After that, you can purchase extended support
-              for a small fee. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Quisquam voluptatibus quibusdam dignissimos fuga fugiat iste!
-            </dd>
-          </div>
-          <div class="FAQ">
-            <dt>
-              <span class="FAQ__question">What kind of payment methods do you accept?</span>
-              <span class="FAQ__button--container">
-                <svg class="FAQ__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                  <path
-                    d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z" />
-                </svg></span>
-            </dt>
-            <dd class="FAQ__answer">
-              We accept all major credit and debit cards. You can also pay using PayPal. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit.
-              Quisquam voluptatibus quibusdam dignissimos fuga fugiat iste!
-            </dd>
-          </div>
-          <div class="FAQ">
-            <dt>
-              <span class="FAQ__question">Is there a subscription service to get the latest templates?</span>
-              <span class="FAQ__button--container">
-                <svg class="FAQ__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                  <path
-                    d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z" />
-                </svg></span>
-            </dt>
-            <dd class="FAQ__answer">
-              Yes, we offer a subscription service where you can get the latest templates as soon as they are released.
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, nisi quidem? Autem illo nemo excepturi.
-            </dd>
-          </div>
-          <div class="FAQ">
-            <dt>
-              <span class="FAQ__question">Are all of the templates compatible with React?</span>
-              <span class="FAQ__button--container">
-                <svg class="FAQ__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                  <path
-                    d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z" />
-                </svg></span>
-            </dt>
-            <dd class="FAQ__answer">
-              Yes, all of our templates are compatible with React. You can easily integrate them into your project.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </dd>
-          </div> -->
+            </label>
 
+            <div class="accordion__content">
+              <p class="accordion__para">Yes, we offer a subscription service where you can get the latest templates as
+                soon as they are released.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, nisi quidem? Autem illo nemo
+                excepturi.</p>
+
+            </div>
+          </div>
+          <div class="FAQ">
+            <input type="checkbox" name="FAQs--accordion" id="question5" class="accordion__input">
+            <label for="question5" class="accordion__label">Are all of the templates compatible with React?
+
+              <span class="FAQ__button--container">
+                <svg class="FAQ__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path
+                    d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z" />
+                </svg></span>
+            </label>
+
+            <div class="accordion__content">
+              <p class="accordion__para">Yes, all of our templates are compatible with React. You can easily integrate
+                them into your project.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+            </div>
           </div>
         </div>
       </div>
+    </div>
   </section>
 
-  <section id="sub__footer">
+  <section id="sub__footer" class="slide-in">
     <div class="row">
       <div class="sub__footer--wrapper">
         <div class="sub__footer">
