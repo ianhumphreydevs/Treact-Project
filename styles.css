@@ -975,17 +975,21 @@ SUBFOOTER
 
 .sub__footer--wrapper {
   padding: 96px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .sub__footer {
   background-color: #6515ff;
   border-radius: 8px;
-  padding: 96px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .sub__footer--row {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .sub__footer--heading {
@@ -1091,11 +1095,13 @@ FAQS
   opacity: 0;
 }
 
+
 .FAQ__chevron {
   width: 16px;
   height: 16px;
   transform: rotate(180deg);
   position: absolute;
+  top: 40%;
   right: 2.25rem;
   transition: transform 0.3s ease;
 }
@@ -1310,6 +1316,9 @@ footer {
   SUB FOOTER
   */
 
+  .sub__footer--wrapper {
+  }
+
   .sub__footer--row {
     display: flex;
     flex-direction: column;
@@ -1320,6 +1329,7 @@ footer {
     padding-right: 0;
     padding-top: 4rem;
     padding-bottom: 4rem;
+    width: 100%;
   }
 
   .sub__footer--heading {
@@ -1643,6 +1653,14 @@ LANDING
   .footer__social--links {
     margin-bottom: 2.5rem;
   }
+
+  /*
+  FAQS
+  */
+
+  .FAQ__button--container {
+    
+  }
 }
 
 @media (max-width: 640px) {
@@ -1712,5 +1730,9 @@ LANDING
   .footer__copyright {
     margin-top: 2rem;
     margin-bottom: 2rem;
+  }
+
+  .FAQ__header{
+    text-align: center;
   }
 }
